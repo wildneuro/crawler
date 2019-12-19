@@ -1,6 +1,6 @@
 FROM golang:latest as builder
 
-WORKDIR $GOPATH/src/YOURREPO/crawler
+WORKDIR $GOPATH/src/github.com/wildneuro/crawler
 
 COPY . .
 RUN go build -mod vendor -o /go/bin/crawler.amd64.bin ./cmd/crawler/crawler.go
